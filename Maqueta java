@@ -1,0 +1,89 @@
+package parcial.pkg2.progra;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Evin Alvarez
+ */
+public final class Menu extends JFrame {
+    
+    public Menu(){
+        
+        
+        setSize(500,400);
+        setTitle("Parcial II Programaciòn");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        panel();
+        
+    }
+    
+    public void panel (){
+        JPanel panel = new JPanel();
+        this.getContentPane().add(panel);
+        panel.setLayout(null); 
+        
+        JLabel titulo=new JLabel("Mantenimiento de produtos");
+        panel.add(titulo);
+        titulo.setBounds(130, 20, 250, 20);
+        
+        JLabel id=new JLabel("ID. Producto: " );
+        panel.add(id);
+        id.setBounds(20, 50 , 200, 30);
+        
+        JLabel nombre=new JLabel("Nombre: " );
+        panel.add(nombre);
+        nombre.setBounds(20, 80 , 200, 30);
+        
+        JLabel precio=new JLabel("Precio: " );
+        panel.add(precio);
+        precio.setBounds(20, 110 , 200, 30);
+        
+        JButton guardar =new JButton("Guardar");
+        guardar.setBounds(100, 150, 80, 30);
+        panel.add(guardar); 
+        
+        JButton editar =new JButton("Editar");
+        editar.setBounds(200, 150, 80, 30);
+        panel.add(editar); 
+        
+        JTextField ID= new JTextField();
+        panel.add(ID);
+        ID.setBounds(100, 55 , 200, 20);
+        
+        JTextField name= new JTextField();
+        panel.add(name);
+        name.setBounds(100, 85 , 200, 20);
+        
+        JTextField P= new JTextField();
+        panel.add(P);
+        P.setBounds(100, 115 , 200, 20);
+    }
+    
+    
+}
+
+Lo que lo hace visible
+
+
+package parcial.pkg2.progra;
+
+/**
+ *
+ * @author Evin Alvarez
+ */
+public class Parcial2Progra {
+
+    
+   public static void main(String[] args) {
+        
+        var v1 =new Menu ();
+        
+        v1.setVisible(true); // con esto se hace visible la ventana 
+       
+    }
+}
